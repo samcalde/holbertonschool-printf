@@ -1,0 +1,31 @@
+NAME                                                                                             
+       printf - format and print data                                                            
+                                                                                                 
+SYNOPSIS                                                                                         
+       printf FORMAT [ARGUMENT]...                                                                                                                                           
+                                                                                                 
+DESCRIPTION                                                                                      
+       Print ARGUMENT(s) according to FORMAT, or execute according to format specifiers.  
+
+Arguments must be passed to the function in the order of appearance in the format.
+
+If a non-existent format specifier is used, it will be printed literally, with the percentage symbol, followed by the character.                   
+                                               
+                                                                                                 
+       FORMAT controls the output as in C printf.  Interpreted sequences are:                    
+                                                                                                                                                                         
+                                                                                                 
+      \n     new line                                                                           
+                                                                                        
+%%     a single %
+
+%c	use a character as an argument
+
+%s	use a string as an argument
+
+%d	use a integer as an argument
+
+%i	use a integer as an argument
+
+AUTHOR                                                                                           
+       Written by Samuel Calderón and Juan Sebastián Varcarcel.
