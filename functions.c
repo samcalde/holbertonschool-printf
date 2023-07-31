@@ -79,10 +79,7 @@ char sfunct(char *str, va_list arguments)
 char dfunct(char *str, va_list arguments)
 {
 	int num = va_arg(arguments, int);
-	int a = 0;
-	int x;
-	int i;
-	int p;
+	int a = 0, x = 0, i = 0, p = 0;
 	char is_min = 'f';
 
 	if (num == -2147483648)
@@ -93,8 +90,7 @@ char dfunct(char *str, va_list arguments)
 
 	if (num < 0)
 	{
-		str[_strlen(str) + 1] = '\0';
-		str[_strlen(str)] = '-';
+		add(str, ('-'));
 		num = -num;
 	}
 
@@ -109,8 +105,7 @@ char dfunct(char *str, va_list arguments)
 	for (i = 0; i <= a; i++)
 	{
 		p = x / powr(10, (a - i));
-		str[_strlen(str) + 1] = '\0';
-		str[_strlen(str)] = (p + '0');
+		add(str, (p + '0'));
 		x = x - (p * powr(10, (a - i)));
 		if (is_min == 't')
 		{
