@@ -1,31 +1,39 @@
-NAME                                                                                             
-       printf - format and print data                                                            
-                                                                                                 
-SYNOPSIS                                                                                         
-       printf FORMAT [ARGUMENT]...                                                                                                                                           
-                                                                                                 
-DESCRIPTION                                                                                      
-       Print ARGUMENT(s) according to FORMAT, or execute according to format specifiers.  
+.TH printf 3 "July 2023" "Version 1.0" "User Commands"
+
+.SH NAME
+printf \- format and print data
+
+.SH SYNOPSIS
+.B printf
+.I FORMAT [ARGUMENT]...
+
+.SH DESCRIPTION
+Print \fIARGUMENT\fP(s) according to \fIFORMAT\fP, or execute according to format specifiers.
 
 Arguments must be passed to the function in the order of appearance in the format.
 
-If a non-existent format specifier is used, it will be printed literally, with the percentage symbol, followed by the character.                   
-                                               
-                                                                                                 
-       FORMAT controls the output as in C printf.  Interpreted sequences are:                    
-                                                                                                                                                                         
-                                                                                                 
-      \n     new line                                                                           
-                                                                                        
-%%     a single %
+If a non-existent format specifier is used, it will be printed literally, with the percentage symbol, followed by the character.
 
-%c	use a character as an argument
+.SH FORMAT
+Controls the output as in C printf. Interpreted sequences are:
 
-%s	use a string as an argument
+.IP \n
+new line
 
-%d	use a integer as an argument
+.IP %%
+a single %
 
-%i	use a integer as an argument
+.IP \c
+use a character as an argument
 
-AUTHOR                                                                                           
-       Written by Samuel Calderón and Juan Sebastián Varcarcel.
+.IP \s
+use a string as an argument
+
+.IP \d
+use an integer as an argument
+
+.IP \i
+use an integer as an argument
+
+.SH AUTHOR
+Written by Samuel Calderón and Juan Sebastián Varcarcel.
